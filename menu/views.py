@@ -8,8 +8,6 @@ from datetime import datetime, date
 from django.db.models import Sum
 from django.contrib.auth import authenticate, login, logout
 #inicio
-#mira mamá lo logre!!
-
 def home(request):
     platillos = Platillos.objects.all()
     bebidas = Bebidas.objects.all()
@@ -25,13 +23,23 @@ def agregar_registro(request):
         total_str = request.POST.get('total')
         productos_seleccionados = request.POST.get('productos_seleccionados')
         
+        # Verificar que los campos requeridos no estén vacíos
+        if not cliente:
+            return HttpResponse("El campo 'cliente' es obligatorio.")
+        if not fecha:
+            return HttpResponse("El campo 'fecha' es obligatorio.")
+        if not total_str:
+            return HttpResponse("El campo 'total' es obligatorio.")
+        if not productos_seleccionados:
+            return HttpResponse("El campo 'productos_seleccionados' es obligatorio.")
+        
         # Intentar convertir el valor de total a un Decimal
         try:
             total = Decimal(total_str)
         except InvalidOperation as e:
             # Manejar el caso en que el valor de total no sea válido
             print(f"Error al convertir el valor de 'total' a Decimal: {e}")
-            return HttpResponseNotFound("El valor de 'total' no es válido.")
+            return HttpResponse("El valor de 'total' no es válido.")
         
         # Validar el valor de total para asegurarse de que sea positivo
         if total < Decimal('0.00'):
@@ -43,11 +51,11 @@ def agregar_registro(request):
         # Guardar el registro en la base de datos
         try:
             nuevo_registro.save()
-            # Redireccionar al home en caso de éxito
-            return redirect('home')
+            # Mostrar un mensaje de éxito junto con los detalles del nuevo registro
+            return HttpResponse(f"Registro agregado correctamente: Cliente - {cliente}, Fecha - {fecha}, Total - {total}, Productos Seleccionados - {productos_seleccionados}")
         except Exception as e:
             print(f"Error al guardar el registro en la base de datos: {e}")
-            return HttpResponseNotFound("Error al guardar el registro en la base de datos.")
+            return HttpResponse("Error al guardar el registro en la base de datos.")
     
     else:
         # Manejar la solicitud GET de manera adecuada
