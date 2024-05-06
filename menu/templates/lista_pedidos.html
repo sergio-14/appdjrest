@@ -1,0 +1,54 @@
+{% extends 'principal.html' %}
+{% load static %}
+
+{% block content %}
+<div id="" style="background-image: url({% static 'img/menu-bg.png' %});background-repeat: no-repeat;background-size: cover;background-position: center;">
+    <div id="js-scroll-content">
+        <section class="blog-sec section"  id="blog">
+            <div class="sec-wp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="sec-title text-center mb-5">
+                                <h2 class="h2-title">Lista de Pedidos Realizados</span></h2>
+                                <div class="sec-title-shape mb-4">
+                                    <img src="{% static 'img/title-shape.svg' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Registros del día actual</h3>
+                    <form action="" method="get">
+                        <label class="titlereg" for="fecha">Ingrese Fecha : </label>
+                        <input class="tdate" type="date" id="fecha" name="fecha">
+                        <button class="sec-btn" type="submit">Filtrar</button>
+                    </form><br><br>
+                    {% if fecha_seleccionada %}
+                    <p class="titlereg">Total ordenes y ganancias del día: {{ total_ganado }} bs.</p><br>
+                    <div class="row"> 
+                        {% for pedido in pedidos %}
+                        <div class="col-lg-4"> 
+                            <div class="blog-box">
+                                <div class="blog-img back-img"
+                                    style="background-image: url({% static 'img/chef/c1.jpg' %});"></div>
+                                <div class="blog-text">
+                                    <p class="blog-date">Fecha Perdido {{ pedido.fecha }}</p>
+                                    <a href="#" class="h4-title">Cliente: {{ pedido.cliente }}</a>
+                                    <p>Orden del Pedido:<br> {{ pedido.productos_seleccionados }}</p>
+                                    <p>Total Pedido: {{pedido.total}} bs.</p>
+                                    <h6>Confirmacion de pedido : {{pedido.estado }} </h6>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %} 
+                    </div>
+                    {% else %}
+                    <br>
+                    <h5>Por favor, selecciona una fecha para ver los pedidos.</h5>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
