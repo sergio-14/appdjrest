@@ -9,6 +9,7 @@ from django.db.models import Sum
 from django.contrib.auth import authenticate, login, logout
 #inicio
 #mira mamá lo logre!!
+
 def home(request):
     platillos = Platillos.objects.all()
     bebidas = Bebidas.objects.all()
