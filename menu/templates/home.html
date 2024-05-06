@@ -139,7 +139,7 @@
             <div class="slider-container" style="background-image: url({% static 'img/pater.png' %});background-repeat: no-repeat;background-size: cover;background-position: center;">
                 <h2 class="h2-title letrg">Momentos Destacados en Nuestra Galeria</h2><br><br>
                 <div class="slider ">
-                    {% for galeria in galeria %}
+                    {% comment %} {% for galeria in galeria %}
                     <div class="col-lg-4 swiper-slide card">
                         <div class="team-box text-center">
                             <div style="background-image: url({{ galeria.img.url }});" class="team-img back-img"></div>
@@ -172,7 +172,7 @@
                             </div>
                         </div>
                     </div><br>
-                    {% endfor %}
+                    {% endfor %} {% endcomment %}
                 </div>
             </div>
         </section>
@@ -231,7 +231,7 @@
                     </div>
                     <div class="menu-list-row">
                         <div class="row g-xxl-5 bydefault_show" id="menu-dish">
-                            {% for platillo in platillos %}
+                            {% comment %} {% for platillo in platillos %}
                             <div class="col-lg-4 col-sm-6 dish-box-wp platillo"
                                 id="platillo_{{ platillo.id }}">
                                 <div class="dish-box text-center">
@@ -413,7 +413,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {% endfor %}
+                            {% endfor %} {% endcomment %}
                         </div>
                     </div>
                 </div>
@@ -439,7 +439,7 @@
                                 <div class="col-md-12">
                                     <p class="totaldetalle" id="total"></p>
                                 </div>
-                                <form id="orden-form" method="post" action="{% url 'agregar_registro' %}">
+                                {% comment %} <form id="orden-form" method="post" action="{% url 'agregar_registro' %}">
                                     {% csrf_token %}
                                     <label class="titlereg" for="cliente">Cliente:</label>
                                     <input class="clientedate" type="text" id="cliente" name="cliente"><br><br>
@@ -461,7 +461,7 @@
                                             <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293z"/>
                                           </svg> Remover</a>
                                     </div>
-                                </form>
+                                </form> {% endcomment %}
                             </div>
                         </div>
                     </div>
