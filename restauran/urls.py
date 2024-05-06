@@ -30,7 +30,6 @@ urlpatterns = [
     path('signin/', views.signin, name='signin'),
     
     
-]
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
