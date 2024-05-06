@@ -1,1 +1,1 @@
-web: gunicorn restauran.wsgi
+web: python manage.py collectstatic && gunicorn restauran.wsgi
