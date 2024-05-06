@@ -1,0 +1,69 @@
+{% extends 'principal.html'%}
+{% load static %}
+{% block content %}
+<div id="" style="background-image: url({% static 'img/menu-bg.png' %});background-repeat: no-repeat;background-size: cover;background-position: center;">
+    <div id="js-scroll-content">
+        <section class="blog-sec section" id="blog">
+            <div class="sec-wp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="sec-title text-center mb-5">
+                                <h2 class="h2-title">Lista de pedidos del día</span></h2>
+                                <div class="sec-title-shape mb-4">
+                                    <img src="{% static 'img/title-shape.svg' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"> 
+                        {% for registro in registros_pendientes %}
+                        <div class="col-lg-4"> 
+                            <div class="blog-box">
+                                <div class="blog-img back-img"
+                                    style="background-image: url({% static 'img/chef/c1.jpg' %});"></div>
+                                <div class="blog-text">
+                                    <p class="blog-date">Fecha Perdido {{ registro.fecha }}</p>
+                                    <a  class="h4-title">Pedido de: {{ registro.cliente }}</a>
+                                    <p>Orden del Pedido:<br> {{ registro.productos_seleccionados }}</p>
+                                    <p>Total Pedido: {{ registro.total }} bs.</p>
+                                    <h6> Estado: {{ registro.estado }}</h6><br>
+                                    <form id="registro_form_{{ registro.id }}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="registro_id" value="{{ registro.id }}">
+                                        <button class="sec-btn" type="submit" name="marcar_realizado"onclick="return confirmActionR()">Dar de Alta</button>
+                                        <button onclick="return confirmActionE()" class="sec-btn" type="submit" name="eliminar_registro">Remover</button>
+                                    </form>
+                                </div>            
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Paginación -->
+                    {% comment %} {% if pedidos.has_previous %}
+                    <a href="?page=1">Primera</a>
+                    <a href="?page={{ pedidos.previous_page_number }}">Anterior</a>
+                    {% endif %}
+                    <span>Página {{ pedidos.number }} de {{ pedidos.paginator.num_pages }}.</span>
+                    {% if pedidos.has_next %}
+                    <a href="?page={{ pedidos.next_page_number }}">Siguiente</a>
+                    <a href="?page={{ pedidos.paginator.num_pages }}">Última</a>
+                    {% endif %} {% endcomment %}
+                </div>
+            </div>
+        </section>
+        <script>
+            function confirmActionR() {
+                return confirm('¿Estás seguro de dar de alta este pedido?');
+            }
+            function confirmActionE() {
+                return confirm('¿Estás seguro de que deseas remover este pedido?');
+            }
+            
+        </script>
+    </div>
+</div>
+{% endblock %}
+
+
+

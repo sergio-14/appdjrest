@@ -1,0 +1,276 @@
+{% extends 'principal.html'%} 
+{% load static %} 
+{% block content %}
+<div id="">
+    <div id="js-scroll-content">
+        <section class="main-banner" id="home" style="background-image: url({% static 'img/faq-bg.png' %});background-repeat: no-repeat;background-size: cover;background-position: center;">
+            <div class="js-parallax-scene">
+                <div class="banner-shape-1 w-100" data-depth="0.30">
+                    <img src="" alt="" />
+                </div>
+                <div class="banner-shape-2 w-100" data-depth="0.25">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="sec-wp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="banner-text">
+                                <h1 class="h1-title">
+                                    ¡bienvenidos A<span>Siete Toros 𓃾</span>restaurant.!
+                                </h1>
+                                <p>
+                                    Recarga energía a mitad de semana con nosotros
+                                    Estamos listos para hacerte disfrutar de una exquisita
+                                    comida con calidad, comodidad y mucho sabor
+                                </p>
+                                <div class="banner-btn mt-4">
+                                    <a href="#menu" class="sec-btn">🔥🍖Nuestro Menu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="banner-img-wp">
+                                <div class="banner-img" style="background-image: url({% static 'img/inilog.jpg' %})">
+                                </div>
+                            </div>
+                            <div class="banner-img-text mt-4 m-auto">
+                                <h5 class="h5-title">Todos Los Días De 11:30 a 22:00</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="background-image: url({% static 'img/menu-bg.png' %})" class="about-sec section" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sec-title text-center mb-5">
+                            <p class="sec-sub-title mb-3">🔥🍖 NOSOTROS 🍖🔥</p>
+                            <h2 class="h2-title">"¡Bienvenido A Nuestro <span>Restaurante de comida Esquisita!"</span>
+                            </h2>
+                            <div class="sec-title-shape mb-4">
+                                <img src="{% static 'img/title-shape.svg' %}" alt="">
+                            </div>
+                            <p>¡Bienvenidos al restaurante Siete Toros!
+                                En Siete Toros, no solo ofrecemos una experiencia gastronómica excepcional, sino que
+                                también te invitamos a sumergirte en un mundo de sabores vibrantes y auténticos. Nuestro
+                                equipo se esfuerza por ofrecerte platos cuidadosamente
+                                preparados que reflejan la riqueza de la cocina tradicional y contemporánea.
+                                Desde nuestras jugosas carnes asadas hasta nuestros exquisitos platos vegetarianos, cada
+                                bocado es una celebración de la pasión y el arte culinario.
+                                Te aseguramos una experiencia culinaria única que estimulará todos tus sentidos.
+                                Te invitamos a venir y descubrir por ti mismo lo que hace que Siete Toros sea único.
+                                ¡Esperamos darte la bienvenida y hacerte sentir como en casa en nuestro restaurante!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 m-auto">
+                        <div class="about-video">
+                            <div class="about-video-img"
+                                style="background-image: url({% static 'img/logonosotros.jpg' %});">
+                            </div>
+                            <div class="play-btn-wp">
+                                <a href="{% static 'img/video.mp4' %}" data-fancybox="video" class="play-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
+                                        <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055zM1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27"/>
+                                    </svg>
+                                </a>
+                                <span>¡¡Enterate más de Nosotros!!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--comunicate con nosotros-->
+        <section id="contacto" class="book-table section bg-light"style="background-image: url({% static 'img/pater.png' %});background-repeat: no-repeat;background-size: cover;background-position: center;">
+            <div class="book-table-shape">
+                <img src="{% static 'img/table.png' %}" alt="">
+            </div>
+            <div class="book-table-shape book-table-shape2">
+                <img src="{% static 'img/table.png' %}" alt="">
+            </div>
+            <div class="sec-wp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="sec-title text-center mb-5">
+                                <p class="sec-sub-title mb-3">Contactate con Nosotros</p>
+                                <h2 class="h2-title">Llamanos o Envianos un Mensaje</h2>
+                                <div class="sec-title-shape mb-4">
+                                    <img src="{% static 'img/title-shape.svg' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-table-info">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4">
+                                <div class="table-title text-center">
+                                    <h3>Toda la Semana</h3>
+                                    <p>9:00 am - 22:00 pm</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="call-now text-center">
+                                    <i ><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-telephone-inbound" viewBox="0 0 16 16">
+                                        <path d="M15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0m-12.2 1.182a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                                      </svg></i>
+                                    <a href="tel:+591-73227139">+591 - 73227139</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="table-title text-center">
+                                    <h3>Dias de Sabado y Domingo</h3>
+                                    <p>11::00 am to 20:00 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </section>
+        
+        <footer class="site-footer" id="contact" style="background-image: url({% static 'img/pater.png' %});background-repeat: no-repeat;background-size: cover;background-position: center;">
+            <div class="top-footer section">
+                <div class="sec-wp">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="footer-info">
+                                    <div class="footer-logo">
+                                        <a href="index.html">
+                                            <img src="{% static 'img/LOGOPROGRA.png' %}" alt="">
+                                        </a>
+                                    </div>
+                                    <p>Mira mas de nosotros siguenos en nuestra redes sociales y mantente informado con pormociones y servicios</p>
+                                    <div class="social-icon">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="uil uil-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="uil uil-instagram"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="uil uil-youtube"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="footer-flex-box">
+                                    <div class="footer-table-info">
+                                        <h3 class="h3-title">Horarios de atencion</h3>
+                                        <ul>
+                                            <li><i class="uil uil-clock"></i> lunes-viernes : 9am - 22pm</li>
+                                            <li><i class="uil uil-clock"></i> sabado-domingo : 11am - 22pm</li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-menu food-nav-menu">
+                                        <h3 class="h3-title">Links</h3>
+                                        <ul class="column-2">
+                                            <li>
+                                                <a href="#home" class="footer-active-menu">Home</a>
+                                            </li>
+                                            <li><a href="#about">Inicio</a></li>
+                                            <li><a href="#menu">Menu</a></li>
+                                            <li><a href="#gallery">Galeria</a></li>
+                                            <li><a href="#contacto">Reseñas</li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-menu">
+                                        <h3 class="h3-title">Company</h3>
+                                        <ul>
+                                            <li><a href="#">Terms & Conditions</a></li>
+                                            <li><a href="#">Privacy Policy</a></li>
+                                            <li><a href="#">Cookie Policy</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <div class="copyright-text">
+                                <p>Desarrollo softwares; 2024 <span class="name">La Rata Company.</span> Contac: +591 - 73227139.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .hidden {
+                          display: none;
+                        }
+                    
+                        .icono {
+                          font-size: 34px;
+                          color: rgb(249, 255, 255);
+                          transition: opacity 0.5s ease-in-out;
+                          background: #ffe924;
+                          border-radius: 100px;
+                          width: 50px;
+                          height: 50px;
+                          text-align: center;
+                          position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          transform: translate(-50%, -50%);
+                          
+                          
+                        }
+                    </style>
+                    
+                    
+                    <script>
+                        const botones = document.querySelectorAll('.boton');
+
+                        const iconos = document.querySelectorAll('.icono');
+
+
+                        botones.forEach((boton, index) => {
+
+                            boton.addEventListener('click', function() {
+
+                                const icono = iconos[index];
+
+                                icono.classList.remove('hidden');
+
+                                setTimeout(function() {
+
+                                    icono.classList.add('hidden');
+
+                                }, 400); // El icono se ocultará después de 2 segundos (2000 milisegundos)
+
+                            });
+
+                        });
+                    </script>
+                    <a href="{% url 'home' %}" class="scrolltop"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708z"/>
+                        <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+                      </svg></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+{% endblock %}
+
