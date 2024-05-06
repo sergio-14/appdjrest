@@ -215,54 +215,7 @@
                             </div>
                         </div>
                     </div>
-                    <style>
-                        .hidden {
-                          display: none;
-                        }
-                    
-                        .icono {
-                          font-size: 34px;
-                          color: rgb(249, 255, 255);
-                          transition: opacity 0.5s ease-in-out;
-                          background: #ffe924;
-                          border-radius: 100px;
-                          width: 50px;
-                          height: 50px;
-                          text-align: center;
-                          position: absolute;
-                          top: 50%;
-                          left: 50%;
-                          transform: translate(-50%, -50%);
-                          
-                          
-                        }
-                    </style>
-                    
-                    
-                    <script>
-                        const botones = document.querySelectorAll('.boton');
-
-                        const iconos = document.querySelectorAll('.icono');
-
-
-                        botones.forEach((boton, index) => {
-
-                            boton.addEventListener('click', function() {
-
-                                const icono = iconos[index];
-
-                                icono.classList.remove('hidden');
-
-                                setTimeout(function() {
-
-                                    icono.classList.add('hidden');
-
-                                }, 400); // El icono se ocultará después de 2 segundos (2000 milisegundos)
-
-                            });
-
-                        });
-                    </script>
+                   
                     <a href="{% url 'home' %}" class="scrolltop"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708z"/>
                         <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
