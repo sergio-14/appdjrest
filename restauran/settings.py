@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'restauran.wsgi.application'
 
 JAZZMIN_SETTINGS = {
     "site_brand": "7Toros",
-    "site_logo":('img/imagen1.png'),
+    "site_logo":('img/fontoro.png'),
     'LANGUAGE_CODE': 'es',
     "topmenu_links": [
 
@@ -182,3 +182,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 ALLOWED_HOSTS = ['localhost','web-production-2464.up.railway.app']
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+CSRF_TRUSTED_ORIGINS = ['http://*','https://web-production-2464.up.railway.app']
